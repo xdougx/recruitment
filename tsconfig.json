@@ -7,7 +7,15 @@
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "target": "es5",
+    "target": "es2015",
+    "baseUrl": "./src",
+    "paths": {
+      "@base/components/*": ["app/components/*"],
+      "@base/decorators/*": ["app/decorators/*"],
+      "@base/models/*": ["app/models/*"],
+      "@base/prototypes/*": ["app/prototypes/*"],
+      "@base/services/*": ["app/services/*"]
+    },
     "typeRoots": [
       "node_modules/@types"
     ],
