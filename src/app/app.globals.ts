@@ -8,14 +8,14 @@ export class Globals {
 
   private static production(): any {
     return {
-      RECRUIT_SERVICE_URL: 'https://dl2.pushbulletusercontent.com/'
+      BASE_RECRUIT_SERVICE_URL: 'https://dl2.pushbulletusercontent.com'
     };
   }
 
 
   private static development(): any {
     return {
-      RECRUIT_SERVICE_URL: 'https://dl2.pushbulletusercontent.com/'
+      BASE_RECRUIT_SERVICE_URL: 'https://dl2.pushbulletusercontent.com'
     };
   }
 

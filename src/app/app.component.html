@@ -1,1 +1,20 @@
-<router-outlet></router-outlet>
+<div class="container">
+  <nav class="navbar is-link">
+    <div class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" routerLink="/candidates">
+          Candidatos
+        </a>
+        <a class="navbar-item" routerLink="/candidates/new">
+          Cadastrar
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="notification">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+

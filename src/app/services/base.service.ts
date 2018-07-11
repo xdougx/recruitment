@@ -10,8 +10,8 @@ export abstract class BaseService {
 
   getHeader(params?: any): any {
     const head = { observe: 'response', headers: new HttpHeaders({
-      'Content-Type': 'application/json',
-      'Device-Type': 'Web'
+      'Content-Type': 'text/plain',
+      'Access-Control-Allow-Origin': '*'
       })
     };
     if (params) { head['params'] = params; }

@@ -1,3 +1,26 @@
-<p>
-  index-candidate works!
-</p>
+<section>
+  <div class="content">
+    <h2>Candidatos</h2>
+  </div>
+
+  <table class="table is-fullwidth">
+    <thead>
+      <tr>
+        <th>Status</th>
+        <th>Nome</th>
+        <th>Email</th>
+        <th>Aniversário</th>
+        <th>Telefone</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let person of objects">
+        <td>{{person.status}}</td>
+        <td>{{person.name}}</td>
+        <td>{{person.email}}</td>
+        <td>Aniversário</td>
+        <td>{{person.phone}}</td>
+      </tr>
+    </tbody>
+  </table>
+</section>

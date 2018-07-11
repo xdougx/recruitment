@@ -1,4 +1,4 @@
-import '@backoffice/prototypes/string.prototype';
+import '@base/prototypes/string.prototype';
 
 export function EnumFunction(elements: Object) {
   return function(target: Object, propertyKey: string, descriptor: PropertyDescriptor) {

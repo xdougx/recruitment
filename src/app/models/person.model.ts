@@ -39,4 +39,8 @@ export class Person extends Base {
   get gender() { return this._gender; }
   set gender(value: string) { this._gender = value; }
 
+  public get status() {
+    return this.isActive ? 'Ativo' : 'Arquivado';
+  }
+
 }

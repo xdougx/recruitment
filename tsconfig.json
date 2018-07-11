@@ -10,7 +10,6 @@
     "target": "es2015",
     "baseUrl": "./src",
     "paths": {
-      "@base/components/*": ["app/components/*"],
       "@base/decorators/*": ["app/decorators/*"],
       "@base/models/*": ["app/models/*"],
       "@base/prototypes/*": ["app/prototypes/*"],

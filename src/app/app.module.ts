@@ -5,6 +5,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { AppRouterModule } from './app-router.module';
+import { CandidatesService } from './services/candidates.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -15,9 +17,17 @@ import { AppRouterModule } from './app-router.module';
     BrowserModule,
     AppRouterModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  exports: [
+    FormsModule,
+    ReactiveFormsModule
+  ],
+  providers: [
+    CandidatesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

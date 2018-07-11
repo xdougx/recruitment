@@ -1,3 +1,94 @@
-<p>
-  new-candidate works!
-</p>
+<div class="card">
+  <header class="card-header">
+    <p class="card-header-title">
+      Cadastrar Candidato
+    </p>
+  </header>
+
+  <div class="card-content">
+    <div class="content">
+      <div>
+        <div *ngIf="loading === false else placeholder">
+          <form [formGroup]="createForm">
+
+            <div class="field">
+              <label class="label">Nome</label>
+              <div class="control" >
+                <input class="input" type="text"  formControlName="name" placeholder="Nome">
+              </div>
+
+              <div *ngIf="createForm.get('name').touched && createForm.get('name').hasError('required')">
+                <p class="help has-text-danger">Nome deve ser preencheido.</p>
+              </div>
+            </div>
+
+            <div class="field" >
+              <label class="label">Email</label>
+              <div class="control" >
+                <input class="input" type="text"  formControlName="email" placeholder="seu.email@dominio.com.br">
+              </div>
+              <div *ngIf="createForm.get('email').hasError('email') && !createForm.get('email').hasError('required')">
+                <p class="help has-text-danger">Insira um email válido.</p>
+              </div>
+
+              <div *ngIf="createForm.get('email').touched && createForm.get('email').hasError('required')">
+                <p class="help has-text-danger">Email deve ser preencheido.</p>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label">Telefone</label>
+              <div class="control">
+                <input class="input" type="text"
+                  formControlName="phone"
+                  placeholder="(99) 999999999">
+              </div>
+
+              <div *ngIf="createForm.get('phone').touched && createForm.get('phone').hasError('required')">
+                <p class="help has-text-danger">Telefone deve ser preencheido.</p>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label">Data de Nascimento</label>
+              <div class="control">
+                <input class="input" type="text"
+                  formControlName="birthDate"
+                  placeholder="01/12/2000">
+              </div>
+
+              <div *ngIf="createForm.get('birthDate').touched && createForm.get('birthDate').hasError('required')">
+                <p class="help has-text-danger">Data de nascimento deve ser preencheido.</p>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label">Endereço</label>
+              <div class="control">
+                <input class="input" type="text"
+                  formControlName="address"
+                  placeholder="Av Elisio Teixeira Leite, 441 - São Paulo - SP">
+              </div>
+
+              <div *ngIf="createForm.get('address').touched && createForm.get('address').hasError('required')">
+                <p class="help has-text-danger">Endereço deve ser preencheido.</p>
+              </div>
+            </div>
+
+
+            picture: ['', [Validators.required]],
+
+
+            <div class="buttons">
+              <button type="button" class="button is-info" [class.is-loading]="submited == true" (click)="submitForm()">Cadastrar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <ng-template class="notification is-default" #placeholder>
+        <p>Carregando</p>
+      </ng-template>
+    </div>
+  </div>
+</div>
